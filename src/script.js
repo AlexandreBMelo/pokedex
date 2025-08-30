@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const pokemon = await response.json();
             fillPokemonInfo(pokemon);
             errorMessage.classList.add('hidden');
+            hideLoading();
             pokemonInfo.classList.remove('hidden');
             btnNavigation.classList.remove('hidden');
         } catch (error) {
@@ -31,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const fillPokemonInfo = (pokemon) => {
         pokemonImage.src = pokemon['sprites']['versions']['generation-v']['black-white']['animated']['front_default'];
-        pokemonName.textContent = `${pokemon.name} (#${pokemon.id})`;
+        pokemonName.textContent = `${pokemon.name} (ID: ${pokemon.id})`;
         pokemonDescription.textContent = `
         Height: ${pokemon.height / 10}m
         | Weight: ${pokemon.weight / 10}kg

@@ -5,18 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokedex Alexandre</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="src/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="/src/image/Poké_Ball.png">
+    <link href="https://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
 </head>
 
 <body>
-    <div class "container">
-        <div id "welcome">
+    <div class="container">
+        <div id="welcome">
             <h1>Welcome to your new Pokedex</h1>
-            <p>Write the pokemon name or id</p>
+            <p>Write the pokemon name or id you want to search:</p>
         </div>
-        <div class "searchEngine">
+        <div class ="searchEngine">
             <input type="text" id="input-search" placeholder="Set Pokemon name or ID">
             <button id="search-btn">Buscar</button>
         </div>
@@ -34,11 +35,11 @@
                 <button id="next-btn">Next</button>
             </div>
             <div id="error-message" class="hidden">
-                <p>error 404 - not found</p>
+                <p>ERROR 404 - Pokemon not found</p>
             </div>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="src/script.js"></script>
 </body>
 
 </html>
