@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const loadingMessage = document.getElementById('loading-message');
     let currentPokemonID = 1;
 
-    const fetchPokemon = async (pokemonID) => {
+    const fetchPokemon = async (pokemonID) => { //comment
         showLoadingMessage();
         try {
             const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonID}`);
