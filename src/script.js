@@ -59,6 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
         pokemonInfo.classList.add('hidden');
         btnNavigation.classList.add('hidden');
         errorMessage.classList.remove('hidden');
+        loadingMessage.classList.add('hidden');
     };
 
     const disableBackButton = () => {
