@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const loadingMessage = document.getElementById('loading-message');
     let currentPokemonID = 1;
 
-    const fetchPokemon = async (pokemonID) => { //comment
+    const fetchPokemon = async (pokemonID) => { //requisição assíncrona para a PokeAPI
         showLoadingMessage();
         try {
             const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonID}`);
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    const fillPokemonInfo = (pokemon) => {
+    const fillPokemonInfo = (pokemon) => { //preenche as informações do Pokémon na tela
         pokemonImage.src = pokemon['sprites']['versions']['generation-v']['black-white']['animated']['front_default'];
         pokemonName.textContent = `${pokemon.name} (ID: ${pokemon.id})`;
         pokemonDescription.textContent = `
@@ -41,18 +41,18 @@ document.addEventListener('DOMContentLoaded', () => {
         disableBackButton();
     }
 
-    const showLoadingMessage = () => {
+    const showLoadingMessage = () => { //mostra a mensagem de carregamento
         loadingMessage.classList.remove('hidden');
         pokemonInfo.classList.add('hidden');
         errorMessage.classList.add('hidden');
         btnNavigation.classList.add('hidden');
     };
 
-    const hideLoading = () => {
+    const hideLoading = () => {       //esconde a mensagem de carregamento
         loadingMessage.classList.add('hidden');
     };
 
-    const showError = () => {
+    const showError = () => { //mostra a mensagem de erro
         pokemonName.textContent = '';
         pokemonDescription.textContent = '';
         pokemonImage.src = '';
@@ -62,11 +62,11 @@ document.addEventListener('DOMContentLoaded', () => {
         loadingMessage.classList.add('hidden');
     };
 
-    const disableBackButton = () => {
+    const disableBackButton = () => { //desabilita o botão de voltar se o ID do Pokémon for 1 ou menor
         backBtn.disabled = (currentPokemonID <= 1);
     };
 
-    const disableSearch = () => {
+    const disableSearch = () => {   //desabilita o botão de busca se o campo de entrada estiver vazio
         searchBtn.disabled = !inputSearch.value.trim();
     };
 
@@ -77,10 +77,10 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     });
 
-    inputSearch.addEventListener('click', disableSearch);
+    inputSearch.addEventListener('input', disableSearch);
 
     inputSearch.addEventListener('keypress', (event) => {
-        if (event.key = 'Enter') {
+        if (event.key === 'Enter') {
             searchBtn.click();
         };
     });

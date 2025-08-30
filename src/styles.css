@@ -80,7 +80,8 @@ body{
     font-family: 'Pokemon Solid', sans-serif;
     background-color: #ffde00;
     border: none;
-    padding: 1px 10px;
+    padding: 1px 20px;
+    margin-top: 30px;
     border-radius: 10px;
     cursor: pointer;
     font-size: 0.6em;
@@ -88,6 +89,10 @@ body{
     color: #3B4CCA;
     box-shadow: 0 4px #c6b200;
     transition: all 0.5s ease;
+}
+
+#next-btn{
+    margin-left: 200px;
 }
 
 #search-btn:hover,
@@ -135,4 +140,26 @@ body{
     outline: none;
     border-color: #a5fd00;
     box-shadow: 0 0 5px rgb(255, 230, 0);
+}
+
+footer{
+    margin-top: 20px;
+    font-size: 0.7em;
+    color: #ffffff;
+    text-align: center;
+    text-shadow: 1px 1px 2px #ffffff;
+    align-items: baseline;
+    position: absolute;
+    bottom: 0%;
+    font-style: bold;
+    background-color: rgba(49, 173, 11, 0.5);
+    width: 100%;
+    padding: 1px 0px ;
+}
+
+footer a{
+    color: #fffbdf;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }

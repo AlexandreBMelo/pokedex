@@ -21,10 +21,10 @@ A aplicação consome a **PokéAPI** para buscar os dados e exibi-los de forma i
 ## 🛠️ Tecnologias Utilizadas
 - **HTML5** → Estrutura do projeto  
 - **CSS3** → Estilização e design  
-- **JavaScript (ES6+)** → Lógica e consumo da API  
+- **JavaScript** → Lógica e consumo da API  
 - **PokéAPI** → Fonte de dados dos Pokémon (https://pokeapi.co/)  
 
 ---
 
 ## 📷 Screenshot
-![Pokedex Screenshot](src/image/)
+![Pokedex Screenshot](./src/image/Screenshot.jpg)
