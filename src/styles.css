@@ -56,9 +56,11 @@ body{
 }
 
 #loading-message{
+    font-family: 'Pokemon Solid', sans-serif;
+    -webkit-text-stroke: 1px #3B4CCA;
     font-size: 1.5em;
     margin-top: 20px;
-    color: #fff;
+    color: #ffcc00;
     font-weight: bold; 
     text-shadow: 1px 1px 2px #000;
 }
